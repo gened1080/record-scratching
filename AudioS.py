@@ -26,7 +26,7 @@ class AudioS():
         name = input('Enter the audio filename you want to read including the extension: ')
         print('----------------------')
         filename, file_ext = os.path.splitext(name)
-        filename = os.getcwd() + '/samples/' + name
+        filename = os.getcwd() + 'content/record-scratching/samples/' + name
         audiofile = pydub.AudioSegment.from_file(filename, file_ext)
         self.framerate = audiofile.frame_rate
         return audiofile
@@ -36,7 +36,7 @@ class AudioS():
         print('----------------------')
         name = input('Enter the finename for the audio you want to write: ')
         print('----------------------')
-        filename = os.getcwd() + '/samples/' + name + '.wav'
+        filename = os.getcwd() + 'content/record-scratching/samples/' + name + '.wav'
         aseg.export(filename, format='wav')
     
     # Obtains the audio signal data from the audio file
